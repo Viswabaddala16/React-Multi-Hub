@@ -1,8 +1,7 @@
-import React from 'react'
 
 const About = () => {
   return (
-    <div style={{textAlign:"center",padding:"40px"}}>About Section</div>
+    <div className='p-2 bg-cyan-200 w-2xl flex justify-center items-center'> About Section</div>
   )
 }
 

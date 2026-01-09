@@ -9,18 +9,18 @@ const Contact = () => {
     setEmail("")
   }
   return (
-    <div style={{ padding : '40px'}}>
+    <div className='flex justify-center items-center flex-col px-6 py-8 bg-green-300 gap-4'>
       <h1>Contact Us</h1>
-      <form onSubmit={handleSubmit} style={{display:"flex",gap:"10px"}}>
+      <form onSubmit={handleSubmit} className='flex gap-5'>
         <input
           type='email'
           placeholder='Your Email'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          style={{outline:"none"}}
+          className='outline-0 bg-amber-50 rounded-2xl text-center'
           required
         />
-        <button type='submit'>Send</button>
+        <button type='submit' className='px-3 py-1 bg-sky-400 rounded-xl text-xl text-white cursor-pointer hover:bg-sky-500'>Send</button>
       </form>
     </div>
   )

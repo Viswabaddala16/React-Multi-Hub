@@ -14,13 +14,14 @@ const NotFound = () => <div style={{padding: "50px"}}>
 
 const App = () => {
   return (
-    <div>
+    <div className='w-full flex justify-center p-2'>
       <Routes>
-        <Route path='/' element={<Layout/>} />
-        <Route index element={<Home />}/>
-        <Route path='/header' element={<Header/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/about' element={<About/>}/>
+        <Route path='/' element={<Layout/>}>
+          <Route index element={<Home />}/>
+          <Route path='/header' element={<Header/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/about' element={<About/>}/>
+        </Route>
         <Route path='*' element={<NotFound />}/>
       </Routes>
     </div>

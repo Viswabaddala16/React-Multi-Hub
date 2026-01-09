@@ -2,16 +2,15 @@ import { Outlet } from "react-router-dom"
 import Header from "../Header/Header"
 
 
-const Layout = () => {
-  return (
-    <div className="app-container">
+const Layout = () => (
+    <div className="flex flex-col h-screen">
         <Header/>
-        <main style={{minHeight: "80vh"}}>
+        <main className="flex-grow container mx-auto p-4">
             <Outlet/>
         </main>
-        <footer style={{textAlign: "center",padding: "20px"}}>© 2026 My React Project</footer>
+        <footer className="py-6 text-center bg-gray-100 mt-auto">© 2026 My React Project</footer>
     </div>
-  )
-}
+
+);
 
 export default Layout

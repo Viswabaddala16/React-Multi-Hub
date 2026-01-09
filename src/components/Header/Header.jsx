@@ -2,12 +2,15 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
+  const navLinkClass = ({isActive}) => 
+    `px-4 py-2 rounded-full transition-colors ${isActive ? 'bg-white text-red-500 shadow-md' : 'text-white hover:bg-red-400'}`;
+  
   return (
     <div>
-      <nav style={{padding: "20px",background: "#e58a8aff",display:"flex",gap:"15px",justifyContent:"center"}}>
-        <NavLink to="/" className={({isActive}) => (isActive? "active-link" : "link")}>Home</NavLink>
-        <NavLink to="/contact" className={({isActive}) => (isActive? "active-link" : "link")}>Contact Us</NavLink>
-        <NavLink to="/about" className={({isActive}) => (isActive? "active-link" : "link")}>About</NavLink>
+      <nav className='bg-red-500 flex gap-5 p-4 rounded-xl shadow-lg'>
+        <NavLink to="/"  className={navLinkClass}>Home</NavLink>
+        <NavLink to="/contact" className={navLinkClass}>Contact Us</NavLink>
+        <NavLink to="/about" className={navLinkClass}>About</NavLink>
       </nav>
       
     </div>
