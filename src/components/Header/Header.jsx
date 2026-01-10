@@ -7,7 +7,7 @@ const Header = () => {
   
   return (
     <div>
-      <nav className='bg-red-500 flex gap-5 p-4 rounded-xl shadow-lg'>
+      <nav className='bg-red-500 flex gap-5 p-4 rounded-xl w-2xl items-center justify-center shadow-lg'>
         <NavLink to="/"  className={navLinkClass}>Home</NavLink>
         <NavLink to="/contact" className={navLinkClass}>Contact Us</NavLink>
         <NavLink to="/about" className={navLinkClass}>About</NavLink>
